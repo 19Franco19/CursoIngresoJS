@@ -29,11 +29,21 @@ function multiplicar()
 { 
 	var Num1;
 	var Num2;
+	var Multiplicacion;
+	Num1= document.getElementById('numeroUno').value;
+	Num2= document.getElementById('numeroDos').value;
+	Multiplicacion= parseInt(Num1) * parseInt(Num2);
+	alert("La multiplicacion es " + Multiplicacion);
 }
 
 function dividir()
 {
 	var Num1;
 	var Num2;
+	var Division;
+	Num1= document.getElementById('numeroUno').value;
+	Num2= document.getElementById('numeroDos').value;
+	Division= parseInt(Num1) / parseInt(Num2);
+	alert("La division es " + Division);
 }
 
