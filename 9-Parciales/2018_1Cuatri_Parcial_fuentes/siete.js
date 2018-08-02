@@ -1,67 +1,96 @@
 /*
 tomar datos
+Jose M 33 9
+Maria F 22 6
+Fer F 15 10
+Ger M 18 1
+Susana F 56 2
+Mirta F 99 8
 
-
-1-
-2-
-3-
+1-Sexo Peor Nota:
+2-Nombre Del mas Viejo:
+3-Nota del mas chico:
 */
 function mostrar()
 {
 	// variables
-	var edades;
+	var edad;
 	var sexo;
 	var nombre;
+	var nota;
+	var contador;
+	var peorNota;
+	var peorNotaSexo;
+	var masVieje;
+	var masViejeNombre;
 
 
+	contador=0;
 
-	//inicializaciones
-	var contador=0
-	var edades=0
-	var respuesta="si";
-			//tomardatos
-			//pedir
-			//parsear
-			//validar
+	while(contador<6)
+	{
+		contador++;
+		nombre= prompt("ingrese nombre");
 
-	while(respuesta !="no")
-	{	
-		edades= prompt('Ingrese Una Edad:');
-		edades=parseInt(edades);
-		respuesta= prompt('Ingrese no para salir');
-
-		while(edades  > 0 && edades < 100 )
+		sexo= prompt("ingrese sexo");	
+		while( sexo!="f" && sexo!="m")
 		{
-			edades= prompt('Ingrese Una Edad:');
-			edades=parseInt(edades);
+			sexo= prompt("ingrese sexo");		
 		}
 
-		sexo= prompt('Ingrese El Sexo:');
 
-		while(sexo == "f" || sexo == "m")
-		
+		edad= prompt("ingrese edad");
+		edad=parseInt(edad);
+		while(isNaN(edad)|| edad<0 || edad >100)
 		{
-		sexo= prompt('Ingrese El Sexo:');
+			edad= prompt("ingrese edad");
+			edad=parseInt(edad);
 		}
 
-		nombre= prompt('"Ingrese El Nombre:');
 
-		while(nombre)
+		nota= prompt("ingrese nota");
+		nota=parseInt(nota);
+		while(isNaN(nota)|| nota<0 || nota >10)
 		{
-		nombre= prompt('"Ingrese El Nombre:');
-	    }
-
+			nota= prompt("ingrese nota");
+			nota=parseInt(nota);
+		}
 
 
 		
 
+		if(contador==1)
+		{
+			peorNota=nota;
+			peorNotaSexo=sexo;
+			masVieje=edad;
+			masViejeNombre=nombre;
+		}
+		else
+		{
+			if(nota<peorNota)
+			{
+				peorNota=nota;
+				peorNotaSexo=sexo;
+			}
+
+			if(edad>masVieje)
+			{
+				masVieje=edad;
+				masViejeNombre=nombre;
+
+			}
+
+		}
+	}
+	
 
 
-		//analisis
+
 
 			
 
-	}
+}
 
 	//mas operaciones
 
@@ -70,4 +99,4 @@ function mostrar()
 	//mostrar
 
 
-}
+
