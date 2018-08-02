@@ -9,7 +9,7 @@ function mostrar()
 	Numero2=prompt("Ingrese otro numero");
 	/*Numero1= parseInt(Numero1);
 	Numero2= parseInt(Numero2);*/
-
+	Suma= parseInt(Numero1) + parseInt(Numero2)
 	if (Numero1 == Numero2) 
 	{
 		alert(Numero1 + Numero2);
@@ -29,6 +29,10 @@ function mostrar()
 		alert(Numero1 + Numero2);
 	}
 
+	if(Suma > 10)
+    {
+    	alert("La suma es " + Suma + " y supero el 10");
+    }
 
 
 
