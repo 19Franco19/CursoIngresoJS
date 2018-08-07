@@ -5,7 +5,7 @@ function mostrar()
 
 	switch(Hora)
 	{
-		case "6":
+		/*case "6":
 		case "7":
 		case "8":
 		case "9":
@@ -22,7 +22,7 @@ function mostrar()
 		case "18":
 		case "19":
 		alert("Es de tarde");
-		break;
+		break;*/
 		case "20":
 		case "21":
 		case "22":
@@ -33,7 +33,7 @@ function mostrar()
 		case "3":
 		case "4":
 		case "5":
-		case "6":
+		
 		if(Hora < 24 && Hora > 19 )
 		{
 			alert("Es de noche, A dormir!");
@@ -43,5 +43,25 @@ function mostrar()
 			alert("Es de noche");
 		}
 		break;
-	}
+		
+		default:
+		if (Hora >= 6 && Hora <= 11) 
+		{
+			alert("Es de mañana");
+		}
+
+		else if (Hora >= 12 && Hora <= 19)
+		{
+			alert("Es de tarde");
+		}
+
+		else
+		{
+			alert("La hora ingresada no es valida");
+		}
+
+
+		}
+
+
 }
